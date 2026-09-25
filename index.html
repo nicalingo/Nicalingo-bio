@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NicaLingo by Sinskira — Enlaces Oficiales</title>
+  
+  <meta name="description" content="NicaLingo desarrollado por Sinskira. Revitalizando las lenguas originarias y afrodescendientes de Nicaragua.">
+  <meta name="theme-color" content="#132a68">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NicaLingo by Sinskira — Enlaces Oficiales">
+  <meta property="og:description" content="Preservación de lenguas indígenas y afrodescendientes de Nicaragua.">
+  <meta property="og:type" content="website">
+
+  <!-- Fuentes e Iconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CAPA DE FONDO ANIMADA (PURO CÓDIGO) -->
+  <div class="ethnic-background" aria-hidden="true">
+    <!-- Guirnalda de banderines superior -->
+    <div class="pennants-bar pennants-top" id="pennantsTop"></div>
+
+    <!-- Canvas para ondas fluidas y constelaciones de partículas -->
+    <canvas id="ethnicCanvas"></canvas>
+
+    <!-- Guirnalda de banderines inferior -->
+    <div class="pennants-bar pennants-bottom" id="pennantsBottom"></div>
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="page-container">
+
+    <!-- Barra de acciones superior -->
+    <header class="top-nav">
+      <button class="nav-btn" id="themeToggle" aria-label="Cambiar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="nav-btn" id="shareBtn" aria-label="Compartir perfil">
+        <i class="fa-solid fa-share-nodes"></i>
+      </button>
+    </header>
+
+    <!-- Perfil / Cabecera -->
+    <section class="profile-section">
+      <div class="avatar-wrapper">
+        <div class="avatar-ring">
+          <div class="avatar-content">
+            <span class="avatar-emoji">🇳🇮</span>
+          </div>
+        </div>
+        <span class="status-badge" title="Activo"></span>
+      </div>
+
+      <h1 class="profile-name">NicaLingo</h1>
+      <div class="developer-tag">
+        <i class="fa-solid fa-code"></i> Desarrollado por <strong>Sinskira</strong>
+      </div>
+      <p class="profile-bio">
+        Preservando y revitalizando las <strong>lenguas originarias y afrodescendientes</strong> de Nicaragua a través de la tecnología e innovación abierta.
+      </p>
+
+      <div class="language-tags">
+        <span class="tag">Miskitu</span>
+        <span class="tag">Mayangna</span>
+        <span class="tag">Creole English</span>
+        <span class="tag">Rama</span>
+      </div>
+    </section>
+
+    <!-- Filtros de categoría -->
+    <nav class="filter-bar" aria-label="Categorías de enlaces">
+      <button class="filter-pill active" data-filter="all">Todos</button>
+      <button class="filter-pill" data-filter="encuesta">Encuesta</button>
+      <button class="filter-pill" data-filter="web">Plataformas</button>
+      <button class="filter-pill" data-filter="nicalingo">NicaLingo</button>
+      <button class="filter-pill" data-filter="sinskira">Sinskira</button>
+    </nav>
+
+    <!-- Lista de Enlaces -->
+    <section class="links-list" id="linksList">
+
+      <!-- 1. Encuesta (Destacada) -->
+      <a href="https://nicalingo-evaluador.github.io/encuestados-/encuestado/index.html?s=estudio-de-aceptacion-proyecto-nicalingo-y-el-aprendizaje-de-lenguas-indigenas-y-afrodescendientes-en-nicaragua-vm6r8" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="link-card featured" 
+         data-category="encuesta">
+        <div class="card-icon-box priority-icon">
+          <i class="fa-solid fa-clipboard-check"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-title-row">
+            <span class="card-title">Estudio de Aceptación</span>
+            <span class="badge-pill">¡Tu opinión cuenta!</span>
+          </div>
+          <span class="card-subtitle">Encuesta sobre el aprendizaje de lenguas indígenas y afrodescendientes</span>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <!-- 2. Web Informativa -->
+      <a href="https://nicalingo.github.io/Nicalingo_Web/" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="link-card" 
+         data-category="web">
+        <div class="card-icon-box">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="card-content">
+          <span class="card-title">Portal Informativo Web</span>
+          <span class="card-subtitle">Conoce la misión, documentación y alcance del proyecto</span>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <!-- 3. Web Interactiva -->
+      <a href="https://nicalingo.github.io/Nicalingo/" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="link-card" 
+         data-category="web">
+        <div class="card-icon-box">
+          <i class="fa-solid fa-shapes"></i>
+        </div>
+        <div class="card-content">
+          <span class="card-title">Plataforma NicaLingo</span>
+          <span class="card-subtitle">Acceso directo a los módulos de aprendizaje en línea</span>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <!-- Divisor para Redes NicaLingo -->
+      <div class="section-divider" data-category="nicalingo">
+        <span>Canales Oficiales · NicaLingo</span>
+      </div>
+
+      <!-- 4. NicaLingo Instagram -->
+      <a href="https://www.instagram.com/nicalingo?stkn=MThmd2RxanNmcGRp" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="link-card instagram-card" 
+         data-category="nicalingo">
+        <div class="card-icon-box">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="card-content">
+          <span class="card-title">Instagram @nicalingo</span>
+          <span class="card-subtitle">Comunidad, novedades y material didáctico</span>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <!-- 5. NicaLingo TikTok -->
+      <a href="https://www.tiktok.com/@nicalingo?_r=1&_t=ZS-9A1DP70stfE" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="link-card tiktok-card" 
+         data-category="nicalingo">
+        <div class="card-icon-box">
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+        <div class="card-content">
+          <span class="card-title">TikTok @nicalingo</span>
+          <span class="card-subtitle">Videos cortos, pronunciación y dinámicas culturales</span>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <!-- Divisor para Sinskira -->
+      <div class="section-divider" data-category="sinskira">
+        <span>Equipo Creador · Sinskira</span>
+      </div>
+
+      <!-- 6. Sinskira Instagram -->
+      <a href="https://www.instagram.com/sinskira_?stkn=dzN0eTJnc25wMXZs" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="link-card sinskira-card" 
+         data-category="sinskira">
+        <div class="card-icon-box">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="card-content">
+          <span class="card-title">Instagram @sinskira_</span>
+          <span class="card-subtitle">Desarrollo, cultura, diseño y procesos de software</span>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <!-- 7. Sinskira TikTok -->
+      <a href="https://www.tiktok.com/@sinskira?_r=1&_t=ZS-9A1DQIS9zbI" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="link-card sinskira-card" 
+         data-category="sinskira">
+        <div class="card-icon-box">
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+        <div class="card-content">
+          <span class="card-title">TikTok @sinskira</span>
+          <span class="card-subtitle">Detrás de cámaras de proyectos y tecnología nica</span>
+        </div>
+        <div class="card-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <p>NicaLingo © <span id="currentYear"></span> · Creado por <strong>Sinskira</strong></p>
+      <p class="footer-sub">Hecho con orgullo y tecnología para la herencia lingüística de Nicaragua</p>
+    </footer>
+
+  </main>
+
+  <!-- Notificación Toast Flotante -->
+  <div class="toast" id="toastNotification" role="alert" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Enlace copiado al portapapeles</span>
+  </div>
+
+  <!-- Script externo -->
+  <script src="script.js"></script>
+</body>
+</html>
