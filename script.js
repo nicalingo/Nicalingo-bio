@@ -1,26 +1,15 @@
-/**
- * NicaLingo by Sinskira — Multi-Link Application
- * Animaciones generativas en Canvas (ondas y partículas étnicas),
- * generador dinámico de banderines en SVG, filtrado y Web Share.
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   initEthnicCanvas();
   renderPennants();
   initCurrentYear();
-  initThemeToggle();
   initFilterTabs();
   initShareAction();
 });
 
-/**
- * 1. Generador de banderines geométricos multicolor (SVG inline dinámico)
- */
 function renderPennants() {
   const topBar = document.getElementById('pennantsTop');
   const bottomBar = document.getElementById('pennantsBottom');
 
-  // Paleta extraída de la imagen de referencia
   const colors = ['#f5b732', '#ea580c', '#dc2626', '#06b6d4', '#2563eb'];
   const count = Math.ceil(window.innerWidth / 22) + 2;
 
@@ -29,7 +18,6 @@ function renderPennants() {
     for (let i = 0; i < count; i++) {
       const color = colors[i % colors.length];
       const delay = (i * 0.12).toFixed(2);
-      // Triángulo hacia abajo si es top, hacia arriba si es bottom
       const points = isTop ? '0,0 26,0 13,28' : '0,28 26,28 13,0';
 
       html += `
@@ -50,9 +38,6 @@ function renderPennants() {
   });
 }
 
-/**
- * 2. Canvas étnico: Ondas sinusoidales continuas y cúmulos de partículas orgánicas
- */
 function initEthnicCanvas() {
   const canvas = document.getElementById('ethnicCanvas');
   if (!canvas) return;
@@ -68,13 +53,11 @@ function initEthnicCanvas() {
   resize();
   window.addEventListener('resize', resize);
 
-  // Configuración de ondas (líneas doradas y celestes de la referencia)
   const waves = [
     { yRatio: 0.28, amplitude: 14, wavelength: 0.0035, speed: 0.012, color: 'rgba(245, 183, 50, 0.28)', width: 1.5 },
     { yRatio: 0.72, amplitude: 18, wavelength: 0.0028, speed: -0.010, color: 'rgba(6, 182, 212, 0.22)', width: 1.5 }
   ];
 
-  // Grupos de partículas que flotan de fondo (cúmulos oscuros/azules)
   const clusters = [
     { cxRatio: 0.18, cyRatio: 0.22, count: 18, radius: 45 },
     { cxRatio: 0.82, cyRatio: 0.18, count: 15, radius: 40 },
@@ -103,7 +86,6 @@ function initEthnicCanvas() {
     tick++;
     ctx.clearRect(0, 0, width, height);
 
-    // 1. Dibujar cúmulos de partículas
     particles.forEach(p => {
       p.phase += p.driftSpeed;
       const wobbleX = Math.sin(p.phase) * 6;
@@ -117,7 +99,6 @@ function initEthnicCanvas() {
       ctx.fill();
     });
 
-    // 2. Dibujar ondas sinusoidales suaves
     waves.forEach(w => {
       ctx.beginPath();
       const centerY = height * w.yRatio;
@@ -141,9 +122,6 @@ function initEthnicCanvas() {
   animate();
 }
 
-/**
- * 3. Asignación automática del año en el footer
- */
 function initCurrentYear() {
   const yearElement = document.getElementById('currentYear');
   if (yearElement) {
@@ -151,41 +129,6 @@ function initCurrentYear() {
   }
 }
 
-/**
- * 4. Alternar tema oscuro/claro con persistencia
- */
-function initThemeToggle() {
-  const themeToggle = document.getElementById('themeToggle');
-  const themeIcon = themeToggle.querySelector('i');
-  
-  const savedTheme = localStorage.getItem('nicalingo-theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-
-  applyTheme(initialTheme);
-
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    applyTheme(nextTheme);
-    localStorage.setItem('nicalingo-theme', nextTheme);
-  });
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    if (theme === 'light') {
-      themeIcon.className = 'fa-solid fa-sun';
-      themeToggle.setAttribute('aria-label', 'Cambiar a modo oscuro');
-    } else {
-      themeIcon.className = 'fa-solid fa-moon';
-      themeToggle.setAttribute('aria-label', 'Cambiar a modo claro');
-    }
-  }
-}
-
-/**
- * 5. Filtrado por categorías (Pills)
- */
 function initFilterTabs() {
   const filterPills = document.querySelectorAll('.filter-pill');
   const linkCards = document.querySelectorAll('.link-card');
@@ -219,9 +162,6 @@ function initFilterTabs() {
   });
 }
 
-/**
- * 6. Botón Compartir (Web Share API con fallback al portapapeles)
- */
 function initShareAction() {
   const shareBtn = document.getElementById('shareBtn');
   const toastNotification = document.getElementById('toastNotification');

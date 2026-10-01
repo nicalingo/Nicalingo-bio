@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>NicaLingo by Sinskira — Enlaces Oficiales</title>
-  
+  <title>NicaLingo</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
   <meta name="description" content="NicaLingo desarrollado por Sinskira. Revitalizando las lenguas originarias y afrodescendientes de Nicaragua.">
-  <meta name="theme-color" content="#132a68">
+  <meta name="theme-color" content="#0b1a3d">
 
   <!-- Open Graph -->
   <meta property="og:title" content="NicaLingo by Sinskira — Enlaces Oficiales">
@@ -41,9 +41,7 @@
 
     <!-- Barra de acciones superior -->
     <header class="top-nav">
-      <button class="nav-btn" id="themeToggle" aria-label="Cambiar tema">
-        <i class="fa-solid fa-moon"></i>
-      </button>
+      <div class="nav-spacer" aria-hidden="true"></div>
       <button class="nav-btn" id="shareBtn" aria-label="Compartir perfil">
         <i class="fa-solid fa-share-nodes"></i>
       </button>
@@ -54,26 +52,27 @@
       <div class="avatar-wrapper">
         <div class="avatar-ring">
           <div class="avatar-content">
-            <span class="avatar-emoji">🇳🇮</span>
+            <img src="assets/logo.png" alt="Logo de NicaLingo" class="avatar-image">
           </div>
         </div>
         <span class="status-badge" title="Activo"></span>
       </div>
 
-      <h1 class="profile-name">NicaLingo</h1>
+      <div class="logo-container">
+        <svg class="nicalingo-svg" viewBox="50 220 740 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NicaLingo">
+          <g class="logo-shape">
+            <path d="M165.3 230.6c-6.5 3.2-6.8 4.3-7.1 30.9-.2 13.2-.1 25.9.3 28.3 1.3 8.8 9.9 13.6 17.3 9.8 5.9-3.1 6.2-4.6 6.2-34.9 0-26.6-.1-27.5-2.2-30.2-2.1-2.6-7.3-5.5-10-5.5-.7 0-2.7.8-4.5 1.6m80.2-.7c-28.1 4.5-45.9 24-45.8 50.1.1 14.1 5.2 26 15.1 35.2 10.5 9.8 22.7 14.2 39.7 14.3 13 0 25.5-2.6 25.5-5.4 0-1.5-1.2-9.8-2.5-17.7l-.6-3.2-5.2 2.1c-4 1.6-7.6 2.1-15.2 2.1-8.9.1-10.5-.2-15-2.6-6.4-3.3-8.7-5.9-12.1-13.2-2.3-5.1-2.6-6.7-2.2-13.6.4-6.2 1-8.8 3.5-13.1 3.3-6 9.9-11.2 16.6-13 5.3-1.4 16.9-.6 22.5 1.6 2.4 1 4.5 1.5 4.8 1.2.8-.7 3.3-20 2.7-20.9-1.6-2.9-22.4-5.4-31.8-3.9m84.6 2.3c-.5 1.3-10.4 22.8-22 47.8-11.7 25-21 46.4-20.9 47.5.3 1.9 1 2 12.3 2h12l2.3-4.8 2.2-4.7h34.6l2.1 5 2.1 5h11.5c8.7 0 11.7-.3 12.6-1.4 1-1.2-3.1-10.8-21.1-49.8-18.9-40.8-22.7-48.3-24.6-48.6-1.5-.2-2.5.3-3.1 2m7.3 57.2c2 5 3.6 9.4 3.6 9.8 0 1-14.7 1.1-15.3 0-.3-.4.5-3.2 1.8-6.2s3-7.3 3.9-9.4c.9-2.2 1.8-3.7 2-3.5s2 4.4 4 9.3M55.7 232.8c-1.5 1.7-1.7 6.5-1.7 48V327l2.5 1.6c3 2 17.6 1.7 19.7-.4.9-.9 1.4-7 1.8-22.5.5-19.1.7-21.2 2.3-21.5 1.1-.2 9.3 7.1 24.9 22.3 12.7 12.5 24.2 23.4 25.5 24.2 2.1 1.4 2.5 1.4 4.8-.1l2.5-1.6v-46.4c0-54.3 1.1-49.6-11.8-49.6-12.6 0-12.2-.8-12.2 25.4 0 19.3-.2 21.4-1.7 22-1.3.6-7.6-5.2-26.6-24.3C72 242.3 60 231 59.1 231c-1 0-2.5.8-3.4 1.8m353.7 1.6-3.4 3.4v85.4l3.3 3.3 3.3 3.3 41.9.4c31.7.3 42.8.1 45.2-.8 6-2.3 8.5-9.9 5.3-15.9-2.8-5.3-4.2-5.5-39.5-5.5h-32.6l-2.4-2.5-2.5-2.4v-31.8c0-30-.1-32-2-35.1-3.8-6.2-11.4-7-16.6-1.8"/>
+            <path d="M479.1 232.4c-1.9.6-4.4 2.4-5.5 3.9-2 2.7-2.1 4.3-2.4 29.2-.3 28.7.1 31.7 5.2 35 2.9 2 8.4 2.2 11.5.6 1.1-.7 2.9-2.6 3.8-4.4 1.6-2.8 1.8-6.6 2.1-27.4.3-24.8-.2-30.2-3.6-34.2-2.4-3-7-4.1-11.1-2.7m266.9-.3c-21.8 1.5-28.3 2.7-30.7 5.4-2.5 2.9-5.1 10.6-5.9 18.1l-.6 5.1-6.4 2.7c-6.7 2.9-11.4 7.4-11.4 10.7 0 2.6 3.5 5.9 6.3 5.9 2.1 0 2.2.4 2.3 8.3.3 22.4 11 36.3 31.6 41.2 8.4 2 12 1.9 21.4-.5 16.6-4.2 27.2-12.2 31.1-23.3 2.2-6.4 2.3-19.7.1-27.9-1.6-5.7-1.6-5.7.8-7.3 2.9-1.9 4-5.6 2.4-8.4-1-1.9-.8-2.1 1.7-2.1 4.4 0 7.3-1.1 7.3-2.7 0-1.7-5.7-7.7-7.9-8.5-1.2-.3-1.1-1 .7-3.5 1.2-1.7 2.2-3.6 2.2-4.1 0-1.4-2.6-2.2-7.1-2.2-4.7 0-7.2 1.1-11.5 5.2l-3.2 3-2.8-6.2c-2.4-5.4-6.5-10.3-8.3-9.9-.3.1-5.8.6-12.1 1m-232.4 2.1c-1.4 2-1.6 7.6-1.6 46.3 0 36.1.3 44.5 1.4 46 2 2.7 14.5 3.5 18.1 1.1l2.5-1.6v-19.4c0-10.7.3-20.1.6-21s1.4-1.6 2.3-1.6 12 10.7 24.7 23.7c23 23.6 23.1 23.7 25.5 22.1l2.4-1.5.3-45.8c.1-33-.1-46.2-.9-47.1-1.5-1.9-18.4-2-19.6-.2-.4.7-1 11-1.3 22.8-.5 21-.6 21.5-2.6 21.5-1.4 0-8.8-7.3-23.8-23.5-22.7-24.6-24.9-26.3-28-21.8m129.6-.2c-21.3 5.6-35 21.8-36.8 43.3-2 23.7 13.1 45 36.2 51.2 13.8 3.7 35.6.9 40.3-5.2 1.9-2.4 2.1-3.9 2.1-20.5 0-17.7 0-17.9-2.5-20.3-2.1-2.1-3.3-2.5-8.8-2.5-10.2 0-11.1 1.2-11.5 15.2-.2 6.2-.8 11.9-1.4 12.5-3 3.7-17.2-.2-23.4-6.5-8.1-8.1-10.2-21.9-5-32.6 6.2-12.6 18.7-17.3 38.4-14.3 4.7.7 5.5.5 7.5-1.6 1.7-1.6 2.6-4 3-7.7.9-7-1.1-10-7.4-11.7-7-1.8-22.3-1.5-30.7.7m-484.8 79c-5.7 2.3-7.3 10.9-2.8 15.4 2.6 2.6 2.9 2.6 16.6 2.6h14l2.9-2.9c4.5-4.6 3.5-11.7-2-14.6-3.3-1.7-24.8-2.1-28.7-.5"/>
+          </g>
+        </svg>
+      </div>
+
       <div class="developer-tag">
         <i class="fa-solid fa-code"></i> Desarrollado por <strong>Sinskira</strong>
       </div>
       <p class="profile-bio">
         Preservando y revitalizando las <strong>lenguas originarias y afrodescendientes</strong> de Nicaragua a través de la tecnología e innovación abierta.
       </p>
-
-      <div class="language-tags">
-        <span class="tag">Miskitu</span>
-        <span class="tag">Mayangna</span>
-        <span class="tag">Creole English</span>
-        <span class="tag">Rama</span>
-      </div>
     </section>
 
     <!-- Filtros de categoría -->
